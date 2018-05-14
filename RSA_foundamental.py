@@ -37,7 +37,7 @@ def eulerTotientF(n):
     startPoint = 2
     eulerTotientF_base(n, startPoint, dividerDict)
     for key in dividerDict.keys():
-        result *= pow(key, dividerDict[key]-1) if dividerDict[key]>1 else key-1
+        result *= (pow(key, dividerDict[key]) - pow(key, dividerDict[key]-1))
     return result
 
 def eulerTotientF_base(n, startPoint, dividerDict):
